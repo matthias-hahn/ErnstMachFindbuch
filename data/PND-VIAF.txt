@@ -1,0 +1,35 @@
+
+anzahl der Verfasser mit PND:  458 von über 800.
+
+Mit folgendem Statement erhält eine JSON Datei zurück, die unter anderem, die 
+VIAF-ID enthält. 
+
+http://viaf.org/viaf/sourceID/DNB|<PND>/justlinks.json
+
+Beschreibung der API: 
+https://platform.worldcat.org/api-explorer/apis/VIAF
+
+BSP: 
+http://viaf.org/viaf/sourceID/DNB|118575767/justlinks.json
+
+Parsen von JSON in Java 8 ohne externe Libs oder jEE
+http://www.adam-bien.com/roller/abien/entry/converting_json_to_map_with
+
+Von einer URL lesen
+import java.net.*;
+import java.io.*;
+
+public class URLReader {
+    public static void main(String[] args) throws Exception {
+
+        URL oracle = new URL("http://www.oracle.com/");
+        BufferedReader in = new BufferedReader(
+        new InputStreamReader(oracle.openStream()));
+
+        String inputLine;
+        while ((inputLine = in.readLine()) != null)
+            System.out.println(inputLine);
+        in.close();
+    }
+}
+

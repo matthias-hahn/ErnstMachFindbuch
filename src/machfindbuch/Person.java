@@ -5,7 +5,6 @@
  */
 package machfindbuch;
 
-import java.time.LocalDate;
 
 /**
  * Repräsentiert eine Person oder Insitution
@@ -21,10 +20,22 @@ public class Person {
     private String verfasserPid;
     private String empfängerPid;
     private String datum; 
- 
-
-   
+    private String koordinaten; 
     private String ort;
+
+    public String getKoordinaten() {
+        String coo = ""; 
+        String[ ] cooArray = ort.split("~");
+        if (cooArray.length > 1) {
+            coo = cooArray[1].trim().replace("\"","");
+        }
+        return coo; 
+    }
+
+    public void setKoordinaten(String koordinaten) {
+        this.koordinaten = koordinaten;
+    }
+ 
 
     public String getDatum() {
         return datum.trim().replace("\"","");
@@ -41,7 +52,7 @@ public class Person {
         
     }; 
     
-    public Person(String dmmId, String verfasser, String verfasserPid, String empfänger, String empfängerPid, String datum, String ort) {
+    public Person(String dmmId, String verfasser, String verfasserPid, String empfänger, String empfängerPid, String datum, String ort, String koordianten) {
         this.dmmID=dmmId; 
         this.verfasser = verfasser;
         this.verfasserPid = verfasserPid;
@@ -49,6 +60,7 @@ public class Person {
         this.empfänger=empfänger;
         this.empfängerPid=empfängerPid; 
         this.ort=ort; 
+        this.koordinaten=koordinaten; 
         
     }
     
@@ -116,6 +128,14 @@ public class Person {
     public void setName(String nachname) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" + "verfasser=" + verfasser + '}';
+    }
+    
+    
+    
     
     
 }
