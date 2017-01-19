@@ -6,7 +6,6 @@
 package machfindbuch;
 
 import input.CSVReader;
-import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashSet;
@@ -44,7 +43,7 @@ import normdaten.Statistik;
  */
 public class MachFindbuch extends Application {
     
-    private static boolean statistik = false;
+    private static final boolean statistik = false;
 
     private final TableView<Person> table = new TableView<>();
 
