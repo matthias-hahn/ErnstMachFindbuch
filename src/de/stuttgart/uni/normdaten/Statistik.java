@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package normdaten;
+package de.stuttgart.uni.normdaten;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -11,8 +11,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.ObservableList;
 import javax.script.ScriptException;
-import machfindbuch.MachFindbuch;
-import machfindbuch.Person;
+import de.stuttgart.uni.machfindbuch.MachFindbuch;
+import de.stuttgart.uni.model.Person;
 
 /**
  *

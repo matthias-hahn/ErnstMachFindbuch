@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package normdaten;
+package de.stuttgart.uni.normdaten;
 
 import java.io.IOException;
 import java.net.URL;
@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.script.ScriptException;
-import machfindbuch.MachFindbuch;
+import de.stuttgart.uni.machfindbuch.MachFindbuch;
 
 /**
  *
